@@ -21,7 +21,7 @@
                 VerticalAlignment="Center"
                 FontSize="28"
                 Style="{StaticResource TitleTextBlockStyle}"
-                Text="General" />
+                Text="通用" />
             <CommandBar
                 Grid.Column="1"
                 HorizontalAlignment="Right"
@@ -31,13 +31,13 @@
                 <AppBarButton
                     Command="{x:Bind ViewModel.RestoreDefaultsCommand}"
                     Icon="Undo"
-                    Label="Restore Defaults" />
+                    Label="恢复默认设置" />
             </CommandBar>
         </Grid>
         <ScrollViewer Grid.Row="2" Margin="24,0,0,0">
             <StackPanel>
                 <ToggleSwitch
-                    Header="Run on startup"
+                    Header="开机启动"
                     IsEnabled="{x:Bind ViewModel.CanEnableStartupTask, Mode=OneWay}"
                     IsOn="{x:Bind ViewModel.StartupTaskEnabled, Mode=TwoWay}" />
                 <TextBlock
@@ -46,65 +46,65 @@
                     Visibility="{x:Bind ViewModel.CanEnableStartupTask, Mode=OneWay, Converter={StaticResource FalseToVisibleConverter}}" />
                 <ToggleSwitch
                     Margin="0,24,0,0"
-                    Header="Show in system tray"
+                    Header="在状态栏中显示"
                     IsOn="{x:Bind ViewModel.EnableTrayIcon, Mode=TwoWay}" />
                 <TextBlock
                     Foreground="Red"
-                    Text="Relaunch required to apply setting"
+                    Text="重启程序后生效"
                     Visibility="{x:Bind ViewModel.ShouldRestartForTrayMessage, Mode=OneWay, Converter={StaticResource TrueToVisibleConverter}}" />
-                <TextBlock Margin="0,24,0,8" Text="Open new terminals as" />
+                <TextBlock Margin="0,24,0,8" Text="使用以下方式新建终端" />
                 <RadioButton
-                    Content="Tabs"
+                    Content="新建标签页"
                     GroupName="NewTerminalLocation"
                     IsChecked="{x:Bind ViewModel.TabIsSelected, Mode=TwoWay}" />
                 <RadioButton
                     Margin="0,0,0,24"
-                    Content="Windows"
+                    Content="新建窗口"
                     GroupName="NewTerminalLocation"
                     IsChecked="{x:Bind ViewModel.WindowIsSelected, Mode=TwoWay}" />
-                <TextBlock Margin="0,0,0,8" Text="Show tabs on" />
+                <TextBlock Margin="0,0,0,8" Text="标签页显示的位置" />
                 <RadioButton
-                    Content="Top"
+                    Content="顶部"
                     GroupName="TabsPosition"
                     IsChecked="{x:Bind ViewModel.TopIsSelected, Mode=TwoWay}" />
                 <RadioButton
                     Margin="0,0,0,24"
-                    Content="Bottom"
+                    Content="底部"
                     GroupName="TabsPosition"
                     IsChecked="{x:Bind ViewModel.BottomIsSelected, Mode=TwoWay}" />
                 <ToggleSwitch
                     Margin="0,0,0,24"
-                    Header="Always show tabs"
+                    Header="总是显示标签"
                     IsOn="{x:Bind ViewModel.AlwaysShowTabs, Mode=TwoWay}" />
                 <ToggleSwitch
                     Margin="0,0,0,24"
-                    Header="Underline selected tab"
+                    Header="选中的标签由下划线标出"
                     IsOn="{x:Bind ViewModel.UnderlineSelectedTab, Mode=TwoWay}" />
-                <TextBlock Margin="0,0,0,8" Text="Color on inactive tabs" />
+                <TextBlock Margin="0,0,0,8" Text="不激活标签的颜色" />
                 <RadioButton
-                    Content="Background"
+                    Content="背景色"
                     GroupName="InactiveTabColorMode"
                     IsChecked="{x:Bind ViewModel.BackgroundIsSelected, Mode=TwoWay}" />
                 <RadioButton
                     Margin="0,0,0,24"
-                    Content="Underline"
+                    Content="强调色"
                     GroupName="InactiveTabColorMode"
                     IsChecked="{x:Bind ViewModel.UnderlinedIsSelected, Mode=TwoWay}" />
                 <ToggleSwitch
                     Margin="0,0,0,24"
-                    Header="Ask before closing windows"
+                    Header="关闭窗口时询问"
                     IsOn="{x:Bind ViewModel.ConfirmClosingWindows, Mode=TwoWay}" />
                 <ToggleSwitch
                     Margin="0,0,0,24"
-                    Header="Ask before closing tabs"
+                    Header="关闭标签前询问"
                     IsOn="{x:Bind ViewModel.ConfirmClosingTabs, Mode=TwoWay}" />
                 <ToggleSwitch
                     Margin="0,0,0,24"
-                    Header="Show new output indicator on background tabs"
+                    Header="在后台标签页显示新的输入指示符"
                     IsOn="{x:Bind ViewModel.ShowNewOutputIndicator, Mode=TwoWay}" />
                 <ToggleSwitch
                     Margin="0,0,0,24"
-                    Header="Windows 10 1809+: Always use WinPty"
+                    Header="Windows 10 1809以上：总是使用WinPty"
                     IsOn="{x:Bind ViewModel.AlwaysUseWinPty, Mode=TwoWay}" />
             </StackPanel>
         </ScrollViewer>

@@ -23,14 +23,14 @@
                 VerticalAlignment="Center"
                 FontSize="28"
                 Style="{StaticResource TitleTextBlockStyle}"
-                Text="Keybindings" />
+                Text="快捷键" />
             <CommandBar
                 Grid.Column="1"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Background="{ThemeResource SystemControlBackgroundAltHighBrush}"
                 DefaultLabelPosition="Right">
-                <AppBarButton Icon="Add" Label="Add">
+                <AppBarButton Icon="Add" Label="新建">
                     <AppBarButton.Flyout>
                         <MenuFlyout x:Name="AddCommandMenu" />
                     </AppBarButton.Flyout>
@@ -39,7 +39,7 @@
                     Command="{x:Bind ViewModel.RestoreDefaultsCommand}"
                     CommandParameter="keyBindings"
                     Icon="Undo"
-                    Label="Restore Defaults" />
+                    Label="恢复默认设置" />
             </CommandBar>
         </Grid>
         <ScrollViewer Grid.Row="2" Margin="24,24,0,0">

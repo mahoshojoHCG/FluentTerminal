@@ -76,7 +76,7 @@
                 VerticalAlignment="Center"
                 FontSize="28"
                 Style="{StaticResource TitleTextBlockStyle}"
-                Text="Profiles" />
+                Text="终端" />
             <CommandBar
                 Grid.Column="1"
                 HorizontalAlignment="Right"
@@ -88,25 +88,25 @@
                     Command="{x:Bind ViewModel.SelectedShellProfile.SetDefaultCommand, Mode=OneWay}"
                     Icon="Accept"
                     IsEnabled="{x:Bind ViewModel.SelectedShellProfile.IsDefault, Mode=OneWay, Converter={StaticResource NegateConverter}}"
-                    Label="Set Default" />
+                    Label="设为默认" />
                 <AppBarButton
                     Command="{x:Bind ViewModel.CloneCommand, Mode=OneWay}"
                     CommandParameter="{x:Bind ViewModel.SelectedShellProfile, Mode=OneWay}"
                     Icon="Copy"
-                    Label="Clone" />
+                    Label="复制" />
                 <AppBarButton
                     Command="{x:Bind ViewModel.SelectedShellProfile.EditCommand, Mode=OneWay}"
                     Icon="Edit"
-                    Label="Edit" />
+                    Label="编辑" />
                 <AppBarButton
                     Command="{x:Bind ViewModel.SelectedShellProfile.DeleteCommand, Mode=OneWay}"
                     Icon="Delete"
-                    Label="Delete"
+                    Label="删除"
                     Visibility="{x:Bind ViewModel.SelectedShellProfile.PreInstalled, Mode=OneWay, Converter={StaticResource FalseToVisibleConverter}}" />
                 <AppBarButton
                     Command="{x:Bind ViewModel.SelectedShellProfile.RestoreDefaultsCommand, Mode=OneWay}"
                     Icon="Undo"
-                    Label="Restore Defaults"
+                    Label="恢复默认设置"
                     Visibility="{x:Bind ViewModel.SelectedShellProfile.PreInstalled, Mode=OneWay, Converter={StaticResource TrueToVisibleConverter}}" />
             </CommandBar>
             <CommandBar
@@ -172,7 +172,7 @@
                                 Margin="0,0,6,0">
                                 <SymbolIcon Symbol="Add" />
                             </Viewbox>
-                            <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="Create new" />
+                            <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="新建" />
                         </StackPanel>
                     </Button.Content>
                 </Button>
@@ -192,7 +192,7 @@
                                 <TextBox
                                     Width="300"
                                     HorizontalAlignment="Left"
-                                    Header="Name"
+                                    Header="名称"
                                     IsEnabled="{x:Bind PreInstalled, Converter={StaticResource NegateConverter}, Mode=OneWay}"
                                     IsSpellCheckEnabled="False"
                                     Text="{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
@@ -200,7 +200,7 @@
                                 <StackPanel Margin="0,24,0,0" Orientation="Horizontal">
                                     <TextBox
                                         Width="300"
-                                        Header="Shell executable location"
+                                        Header="可执行文件位置"
                                         IsEnabled="{x:Bind PreInstalled, Converter={StaticResource NegateConverter}, Mode=OneWay}"
                                         IsSpellCheckEnabled="False"
                                         Text="{x:Bind Location, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
@@ -216,7 +216,7 @@
                                 <StackPanel Margin="0,24,0,0" Orientation="Horizontal">
                                     <TextBox
                                         Width="300"
-                                        Header="Working directory"
+                                        Header="工作目录"
                                         IsEnabled="{x:Bind InEditMode, Mode=OneWay}"
                                         IsSpellCheckEnabled="False"
                                         Text="{x:Bind WorkingDirectory, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
@@ -232,14 +232,14 @@
                                     Width="300"
                                     Margin="0,24,0,0"
                                     HorizontalAlignment="Left"
-                                    Header="Arguments"
+                                    Header="启动参数"
                                     IsEnabled="{x:Bind InEditMode, Mode=OneWay}"
                                     IsSpellCheckEnabled="False"
                                     Text="{x:Bind Arguments, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                                 <ComboBox
                                     Width="150"
                                     Margin="0,24,0,0"
-                                    Header="Tab color"
+                                    Header="标签颜色"
                                     IsEnabled="{x:Bind InEditMode, Mode=OneWay}"
                                     ItemTemplateSelector="{StaticResource TabThemeTemplateSelector}"
                                     ItemsSource="{x:Bind TabThemes, Mode=OneWay}"
@@ -247,23 +247,23 @@
                                 <ComboBox
                                     Width="150"
                                     Margin="0,24,0,0"
-                                    Header="Theme"
+                                    Header="主题"
                                     IsEnabled="{x:Bind InEditMode, Mode=OneWay}"
                                     ItemTemplateSelector="{StaticResource TerminalThemeTemplateSelector}"
                                     ItemsSource="{x:Bind TerminalThemes, Mode=OneWay}"
                                     SelectedItem="{Binding SelectedTerminalTheme, Mode=TwoWay}" />
 
-                                <TextBlock Margin="0,24,0,8" Text="Line ending translation mode on paste" />
+                                <TextBlock Margin="0,24,0,8" Text="粘贴时是否改变行尾" />
                                 <RadioButton
-                                    Content="Do not modify line endings"
+                                    Content="不改变行尾"
                                     GroupName="LineEndingStyle"
                                     IsChecked="{x:Bind DoNotModifyIsSelected, Mode=TwoWay}" />
                                 <RadioButton
-                                    Content="Convert line endings to CR+LF"
+                                    Content="改变行尾为CR+LF(Windows)"
                                     GroupName="LineEndingStyle"
                                     IsChecked="{x:Bind ToCRLFIsSelected, Mode=TwoWay}" />
                                 <RadioButton
-                                    Content="Convert line endings to LF"
+                                    Content="改变行尾为LF(Unix)"
                                     GroupName="LineEndingStyle"
                                     IsChecked="{x:Bind ToLFIsSelected, Mode=TwoWay}" />
 
@@ -275,8 +275,8 @@
                                     <TextBlock
                                         Margin="0,0,6,0"
                                         VerticalAlignment="Center"
-                                        Text="Keyboard shortcut" />
-                                    <HyperlinkButton Command="{x:Bind AddKeyboardShortcutCommand}" Content="Add" />
+                                        Text="快捷键" />
+                                    <HyperlinkButton Command="{x:Bind AddKeyboardShortcutCommand}" Content="添加" />
                                 </StackPanel>
                                 <views:KeyBindingsView ShowCommandName="False" ViewModel="{x:Bind KeyBindings}" />
                             </StackPanel>
@@ -284,20 +284,20 @@
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="{x:Bind Name, Mode=OneWay}" />
                                 <controls:HeaderedTextBlock
                                     Margin="0,58,0,0"
-                                    Header="Shell executable location"
+                                    Header="可执行文件位置"
                                     Text="{x:Bind Location, Mode=OneWay}" />
                                 <controls:HeaderedTextBlock
                                     Margin="0,36,0,0"
-                                    Header="Working directory"
+                                    Header="工作目录"
                                     Text="{x:Bind WorkingDirectory, Mode=OneWay}" />
                                 <controls:HeaderedTextBlock
                                     Margin="0,36,0,0"
-                                    Header="Arguments"
+                                    Header="启动参数"
                                     Text="{x:Bind Arguments, Mode=OneWay}" />
                                 <controls:HeaderedContentControl
                                     Margin="0,36,0,0"
                                     HorizontalContentAlignment="Stretch"
-                                    Header="Theme">
+                                    Header="主题">
                                     <ContentControl
                                         Margin="0,6,0,0"
                                         Content="{x:Bind SelectedTerminalTheme, Mode=OneWay}"
@@ -306,7 +306,7 @@
                                 <controls:HeaderedContentControl
                                     Margin="0,36,0,0"
                                     HorizontalContentAlignment="Stretch"
-                                    Header="Tab color">
+                                    Header="标签颜色">
                                     <ContentControl
                                         Margin="0,6,0,0"
                                         Content="{x:Bind SelectedTabTheme, Mode=OneWay}"
@@ -315,7 +315,7 @@
                                 <controls:HeaderedContentControl
                                     Margin="0,36,0,0"
                                     HorizontalContentAlignment="Stretch"
-                                    Header="Line ending translation mode">
+                                    Header="粘贴时是否改变行尾">
                                     <ContentControl
                                         Margin="0,6,0,0"
                                         Content="{x:Bind LineEndingStyle, Mode=OneWay, Converter={StaticResource EnumToDescriptionConverter}}"
@@ -324,7 +324,7 @@
                                 <controls:HeaderedContentControl
                                     Margin="0,36,0,0"
                                     HorizontalContentAlignment="Stretch"
-                                    Header="Keyboard shortcut">
+                                    Header="快捷键">
                                     <views:KeyBindingsView
                                         Margin="0,6,0,0"
                                         ShowCommandName="False"

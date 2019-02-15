@@ -6,11 +6,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="300"
     d:DesignWidth="400"
-    PrimaryButtonText="OK"
-    SecondaryButtonText="Cancel"
+    PrimaryButtonText="确定"
+    SecondaryButtonText="取消"
     mc:Ignorable="d">
     <StackPanel>
-        <TextBlock Margin="0,0,0,24" Text="Enter your keybinding now" />
+        <TextBlock Margin="0,0,0,24" Text="按下你要设定的快捷键" />
         <StackPanel x:Name="Root" Orientation="Horizontal">
             <Grid
                 Width="48"
@@ -72,7 +72,7 @@
                 x:Name="ResetButton"
                 Margin="24,0,0,0"
                 Command="{x:Bind ResetCommand}"
-                Content="Reset"
+                Content="重置"
                 PreviewKeyDown="OnResetButtonPreviewKeyDown" />
         </StackPanel>
     </StackPanel>

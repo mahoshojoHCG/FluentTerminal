@@ -12,7 +12,7 @@
             Canvas.ZIndex="1"
             IsHitTestVisible="False"
             Style="{StaticResource CaptionTextBlockStyle}"
-            Text="Settings"
+            Text="设置"
             Visibility="{Binding IsPaneOpen, ElementName=NavigationView, Converter={StaticResource TrueToVisibleConverter}}" />
         <NavigationView
             x:Name="NavigationView"
@@ -25,7 +25,7 @@
             OpenPaneLength="200"
             SelectionChanged="NavigationView_SelectionChanged">
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="General" Tag="general">
+                <NavigationViewItem Content="通用" Tag="general">
                     <NavigationViewItem.Icon>
                         <FontIcon
                             FontFamily="/Assets/settingsicons.ttf#settingsicons"
@@ -33,7 +33,7 @@
                             ToolTipService.ToolTip="General" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Terminal" Tag="terminal">
+                <NavigationViewItem Content="显示" Tag="terminal">
                     <NavigationViewItem.Icon>
                         <FontIcon
                             FontFamily="/Assets/settingsicons.ttf#settingsicons"
@@ -41,7 +41,7 @@
                             ToolTipService.ToolTip="Terminal" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Profiles" Tag="profiles">
+                <NavigationViewItem Content="终端" Tag="profiles">
                     <NavigationViewItem.Icon>
                         <FontIcon
                             FontFamily="/Assets/settingsicons.ttf#settingsicons"
@@ -49,7 +49,7 @@
                             ToolTipService.ToolTip="Shell" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Keybindings" Tag="keyBindings">
+                <NavigationViewItem Content="快捷键" Tag="keyBindings">
                     <NavigationViewItem.Icon>
                         <FontIcon
                             FontFamily="/Assets/settingsicons.ttf#settingsicons"
@@ -57,7 +57,7 @@
                             ToolTipService.ToolTip="Keybindings" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Mouse" Tag="mouse">
+                <NavigationViewItem Content="鼠标" Tag="mouse">
                     <NavigationViewItem.Icon>
                         <FontIcon
                             FontFamily="/Assets/settingsicons.ttf#settingsicons"
@@ -65,7 +65,7 @@
                             ToolTipService.ToolTip="Keybindings" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Themes" Tag="themes">
+                <NavigationViewItem Content="主题" Tag="themes">
                     <NavigationViewItem.Icon>
                         <FontIcon
                             FontFamily="/Assets/settingsicons.ttf#settingsicons"
@@ -75,7 +75,7 @@
                 </NavigationViewItem>
             </NavigationView.MenuItems>
             <NavigationView.PaneFooter>
-                <NavigationViewItem Content="About" Tapped="AboutTapped">
+                <NavigationViewItem Content="关于" Tapped="AboutTapped">
                     <NavigationViewItem.Icon>
                         <FontIcon
                             FontFamily="Segoe MDL2 Assets"

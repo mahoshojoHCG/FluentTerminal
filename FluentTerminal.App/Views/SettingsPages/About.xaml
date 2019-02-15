@@ -23,7 +23,7 @@
                 VerticalAlignment="Center"
                 FontSize="28"
                 Style="{StaticResource TitleTextBlockStyle}"
-                Text="About" />
+                Text="关于" />
             <CommandBar
                 Grid.Column="1"
                 HorizontalAlignment="Right"
@@ -33,7 +33,7 @@
                 <AppBarButton
                     Command="{x:Bind ViewModel.CheckForUpdatesCommand}"
                     Icon="Sync"
-                    Label="Check for updates" />
+                    Label="检查更新" />
             </CommandBar>
         </Grid>
         <ScrollViewer Grid.Row="2" Margin="24,0,0,0">
@@ -53,24 +53,24 @@
                         Stretch="None" />
 
                     <!--  Current version  -->
-                    <TextBlock Margin="0,24,0,8" Text="Current version" />
+                    <TextBlock Margin="0,24,0,8" Text="当前版本" />
                     <TextBlock><Run Text="{x:Bind ViewModel.CurrentVersion}" />
-                         - <Hyperlink NavigateUri="{x:Bind ViewModel.CurrentVersionReleaseNotesURL}">Release notes</Hyperlink></TextBlock>
+                         - <Hyperlink NavigateUri="{x:Bind ViewModel.CurrentVersionReleaseNotesURL}">发布说明</Hyperlink></TextBlock>
 
                     <!--  Latest version  -->
-                    <TextBlock Margin="0,24,0,8" Text="Latest version" />
+                    <TextBlock Margin="0,24,0,8" Text="最新版本" />
                     <TextBlock Visibility="{x:Bind ViewModel.LatestVersionLoading, Mode=OneWay, Converter={StaticResource TrueToVisibleConverter}}"><Italic>loading...</Italic></TextBlock>
                     <TextBlock Visibility="{x:Bind ViewModel.LatestVersionNotFound, Mode=OneWay, Converter={StaticResource TrueToVisibleConverter}}"><Italic>Not found</Italic></TextBlock>
                     <TextBlock Visibility="{x:Bind ViewModel.LatestVersionFound, Mode=OneWay, Converter={StaticResource TrueToVisibleConverter}}">
                         <Run Text="{x:Bind ViewModel.LatestVersion, Mode=OneWay}" />
                          - <Hyperlink NavigateUri="{x:Bind ViewModel.LatestVersionReleaseNotesURL, Mode=OneWay}">
-                            Release notes
+                            更新说明
                         </Hyperlink>
                     </TextBlock>
 
                     <!--  License  -->
-                    <TextBlock Margin="0,24,0,8" Text="License" />
-                    <TextBlock><Hyperlink NavigateUri="https://github.com/felixse/FluentTerminal/blob/master/LICENSE">GNU General Public License v3.0</Hyperlink></TextBlock>
+                    <TextBlock Margin="0,24,0,8" Text="许可" />
+                    <TextBlock><Hyperlink NavigateUri="https://github.com/felixse/FluentTerminal/blob/master/LICENSE">GNU通用公共许可协议v3.0</Hyperlink></TextBlock>
                 </StackPanel>
                 <StackPanel
                     Grid.Row="1"
@@ -80,6 +80,8 @@
                     <TextBlock>
                         Created by <Italic>felixse</Italic>
                         and <Hyperlink NavigateUri="https://github.com/felixse/FluentTerminal/graphs/contributors">contributors</Hyperlink></TextBlock>
+                    <TextBlock>
+                        简体中文由魔法少女HCG提供</TextBlock>
                 </StackPanel>
             </Grid>
         </ScrollViewer>

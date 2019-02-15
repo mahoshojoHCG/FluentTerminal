@@ -254,9 +254,9 @@ namespace FluentTerminal.App.ViewModels
                 throw new InvalidOperationException();
             }
 
-            var result = await _dialogService.ShowMessageDialogAsnyc("Please confirm", "Are you sure you want to restore this profile?", DialogButton.OK, DialogButton.Cancel).ConfigureAwait(true);
+            var result = await _dialogService.ShowMessageDialogAsnyc("提示", "是否还原此配置？", DialogButton.确认, DialogButton.取消).ConfigureAwait(true);
 
-            if (result == DialogButton.OK)
+            if (result == DialogButton.确认)
             {
                 Model = _defaultValueProvider.GetPreinstalledShellProfiles().FirstOrDefault(x => x.Id == Model.Id);
                 InitializeViewModelProperties(Model);
@@ -289,9 +289,9 @@ namespace FluentTerminal.App.ViewModels
 
         private async Task CancelEdit()
         {
-            var result = await _dialogService.ShowMessageDialogAsnyc("Please confirm", "Are you sure you want to discard all changes?", DialogButton.OK, DialogButton.Cancel).ConfigureAwait(true);
+            var result = await _dialogService.ShowMessageDialogAsnyc("提示", "是否还原所有设置？", DialogButton.确认, DialogButton.取消).ConfigureAwait(true);
 
-            if (result == DialogButton.OK)
+            if (result == DialogButton.确认)
             {
                 Arguments = _fallbackProfile.Arguments;
                 Location = _fallbackProfile.Location;
@@ -320,9 +320,9 @@ namespace FluentTerminal.App.ViewModels
 
         private async Task Delete()
         {
-            var result = await _dialogService.ShowMessageDialogAsnyc("Please confirm", "Are you sure you want to delete this theme?", DialogButton.OK, DialogButton.Cancel).ConfigureAwait(true);
+            var result = await _dialogService.ShowMessageDialogAsnyc("提示", "是否删除该主题？", DialogButton.确认, DialogButton.取消).ConfigureAwait(true);
 
-            if (result == DialogButton.OK)
+            if (result == DialogButton.确认)
             {
                 Deleted?.Invoke(this, EventArgs.Empty);
             }

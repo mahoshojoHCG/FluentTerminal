@@ -233,9 +233,9 @@ namespace FluentTerminal.App.ViewModels
         {
             if (_applicationSettings.ConfirmClosingWindows)
             {
-                var result = await _dialogService.ShowMessageDialogAsnyc("Please confirm", "Are you sure you want to close this window?", DialogButton.OK, DialogButton.Cancel).ConfigureAwait(false);
+                var result = await _dialogService.ShowMessageDialogAsnyc("确认", "是否确定关闭此窗口？", DialogButton.确认, DialogButton.取消).ConfigureAwait(false);
 
-                if (result == DialogButton.OK)
+                if (result == DialogButton.确认)
                 {
                     CloseAllTerminals();
                     Closed?.Invoke(this, EventArgs.Empty);

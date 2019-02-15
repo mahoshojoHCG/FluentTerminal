@@ -303,9 +303,9 @@ namespace FluentTerminal.App.ViewModels
 
         private async Task CancelEdit()
         {
-            var result = await _dialogService.ShowMessageDialogAsnyc("Please confirm", "Are you sure you want to discard all changes?", DialogButton.OK, DialogButton.Cancel).ConfigureAwait(true);
+            var result = await _dialogService.ShowMessageDialogAsnyc("提示", "是否放弃所有更改？", DialogButton.确认, DialogButton.取消).ConfigureAwait(true);
 
-            if (result == DialogButton.OK)
+            if (result == DialogButton.确认)
             {
                 Black = _fallBackColors.Black;
                 Red = _fallBackColors.Red;
@@ -345,9 +345,9 @@ namespace FluentTerminal.App.ViewModels
 
         private async Task Delete()
         {
-            var result = await _dialogService.ShowMessageDialogAsnyc("Please confirm", "Are you sure you want to delete this theme?", DialogButton.OK, DialogButton.Cancel).ConfigureAwait(true);
+            var result = await _dialogService.ShowMessageDialogAsnyc("提示", "是否删除该主题？", DialogButton.确认, DialogButton.取消).ConfigureAwait(true);
 
-            if (result == DialogButton.OK)
+            if (result == DialogButton.确认)
             {
                 Deleted?.Invoke(this, EventArgs.Empty);
             }

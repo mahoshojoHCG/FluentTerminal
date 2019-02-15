@@ -14,16 +14,16 @@ namespace FluentTerminal.SystemTray
 
         public SystemTrayApplicationContext()
         {
-            var openMenuItem = new MenuItem("Show", new EventHandler(OpenApp));
-            var newWindowItem = new MenuItem("New terminal", new EventHandler(NewWindow));
-            var settingsMenuItem = new MenuItem("Show settings", new EventHandler(ShowSettings));
-            var exitMenuItem = new MenuItem("Exit", new EventHandler(Exit));
+            var openMenuItem = new MenuItem("显示", new EventHandler(OpenApp));
+            var newWindowItem = new MenuItem("新终端", new EventHandler(NewWindow));
+            var settingsMenuItem = new MenuItem("设置", new EventHandler(ShowSettings));
+            var exitMenuItem = new MenuItem("退出", new EventHandler(Exit));
 
             openMenuItem.DefaultItem = true;
 
             _notifyIcon = new NotifyIcon();
             _notifyIcon.DoubleClick += OpenApp;
-            _notifyIcon.Text = "Fluent Terminal";
+            _notifyIcon.Text = "流畅终端";
             _notifyIcon.Icon = Properties.Resources.Square44x44Logo_scale_100;
             _notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] { openMenuItem, newWindowItem, settingsMenuItem, exitMenuItem });
             _notifyIcon.Visible = true;

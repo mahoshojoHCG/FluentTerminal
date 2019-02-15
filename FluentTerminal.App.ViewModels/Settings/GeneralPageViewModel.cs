@@ -267,9 +267,9 @@ namespace FluentTerminal.App.ViewModels.Settings
 
         private async Task RestoreDefaults()
         {
-            var result = await _dialogService.ShowMessageDialogAsnyc("Please confirm", "Are you sure you want to restore the general settings?", DialogButton.OK, DialogButton.Cancel).ConfigureAwait(true);
+            var result = await _dialogService.ShowMessageDialogAsnyc("提示", "是否还原通用设置？", DialogButton.确认, DialogButton.取消).ConfigureAwait(true);
 
-            if (result == DialogButton.OK)
+            if (result == DialogButton.确认)
             {
                 var defaults = _defaultValueProvider.GetDefaultApplicationSettings();
                 ConfirmClosingWindows = defaults.ConfirmClosingWindows;

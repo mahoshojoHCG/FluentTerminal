@@ -49,7 +49,7 @@
                         <MenuFlyoutItem
                             Width="160"
                             Command="{x:Bind ViewModel.AddTerminalCommand}"
-                            Text="New tab">
+                            Text="新建标签页">
                             <MenuFlyoutItem.Icon>
                                 <SymbolIcon Symbol="Add" />
                             </MenuFlyoutItem.Icon>
@@ -57,7 +57,7 @@
                         <MenuFlyoutItem
                             Width="160"
                             Command="{x:Bind ViewModel.ShowSettingsCommand}"
-                            Text="Settings">
+                            Text="设置">
                             <MenuFlyoutItem.Icon>
                                 <SymbolIcon Symbol="Setting" />
                             </MenuFlyoutItem.Icon>
@@ -65,7 +65,7 @@
                         <MenuFlyoutItem
                             Width="160"
                             Command="{x:Bind ViewModel.ShowAboutCommand}"
-                            Text="About">
+                            Text="关于">
                             <MenuFlyoutItem.Icon>
                                 <FontIcon
                                     FontFamily="Segoe MDL2 Assets"

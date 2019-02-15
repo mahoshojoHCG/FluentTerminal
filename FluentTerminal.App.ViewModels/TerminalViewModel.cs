@@ -295,7 +295,7 @@ namespace FluentTerminal.App.ViewModels
             }
             else
             {
-                await _dialogService.ShowMessageDialogAsnyc("Error", response.Error, DialogButton.OK).ConfigureAwait(true);
+                await _dialogService.ShowMessageDialogAsnyc("Error", response.Error, DialogButton.确认).ConfigureAwait(true);
             }
 
             await FocusTerminal().ConfigureAwait(true);
@@ -451,9 +451,9 @@ namespace FluentTerminal.App.ViewModels
         {
             if (ApplicationSettings.ConfirmClosingTabs)
             {
-                var result = await _dialogService.ShowMessageDialogAsnyc("Please confirm", "Are you sure you want to close this tab?", DialogButton.OK, DialogButton.Cancel).ConfigureAwait(true);
+                var result = await _dialogService.ShowMessageDialogAsnyc("提示", "是否关闭此标签？", DialogButton.确认, DialogButton.取消).ConfigureAwait(true);
 
-                if (result == DialogButton.Cancel)
+                if (result == DialogButton.取消)
                 {
                     return;
                 }

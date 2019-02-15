@@ -4,79 +4,79 @@ namespace FluentTerminal.Models.Enums
 {
     public enum Command
     {
-        [Description("Toggle window")]
+        [Description("切换窗口")]
         ToggleWindow,
 
-        [Description("Next tab")]
+        [Description("下一个标签页")]
         NextTab,
 
-        [Description("Previous tab")]
+        [Description("上一个标签页")]
         PreviousTab,
 
-        [Description("New tab")]
+        [Description("新建标签页")]
         NewTab,
 
-        [Description("Configurable new tab")]
+        [Description("配置新标签页")]
         ConfigurableNewTab,
 
-        [Description("Change tab title")]
+        [Description("更改标签页名称")]
         ChangeTabTitle,
 
-        [Description("Close tab")]
+        [Description("关闭标签页")]
         CloseTab,
 
-        [Description("New window")]
+        [Description("新建窗口")]
         NewWindow,
 
-        [Description("Show settings")]
+        [Description("显示设置")]
         ShowSettings,
 
-        [Description("Copy")]
+        [Description("复制")]
         Copy,
 
-        [Description("Paste")]
+        [Description("粘贴")]
         Paste,
 
-        [Description("Paste without newlines")]
+        [Description("去回车粘贴")]
         PasteWithoutNewlines,
 
-        [Description("Search")]
+        [Description("搜索")]
         Search,
 
-        [Description("Toggle Fullscreen")]
+        [Description("切换全屏")]
         ToggleFullScreen,
 
-        [Description("Select all")]
+        [Description("全选")]
         SelectAll,
 
-        [Description("Clear")]
+        [Description("清除")]
         Clear,
 
-        [Description("Switch to Terminal 1")]
+        [Description("切换到1号终端")]
         SwitchToTerm1,
 
-        [Description("Switch to Terminal 2")]
+        [Description("切换到2号终端")]
         SwitchToTerm2,
 
-        [Description("Switch to Terminal 3")]
+        [Description("切换到3号终端")]
         SwitchToTerm3,
 
-        [Description("Switch to Terminal 4")]
+        [Description("切换到4号终端")]
         SwitchToTerm4,
 
-        [Description("Switch to Terminal 5")]
+        [Description("切换到5号终端")]
         SwitchToTerm5,
 
-        [Description("Switch to Terminal 6")]
+        [Description("切换到6号终端")]
         SwitchToTerm6,
 
-        [Description("Switch to Terminal 7")]
+        [Description("切换到7号终端")]
         SwitchToTerm7,
 
-        [Description("Switch to Terminal 8")]
+        [Description("切换到8号终端")]
         SwitchToTerm8,
 
-        [Description("Switch to Terminal 9")]
+        [Description("切换到9号终端")]
         SwitchToTerm9
     }
 }

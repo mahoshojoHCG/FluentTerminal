@@ -22,12 +22,12 @@ namespace FluentTerminal.App.Services.Implementation
             var latest = await GetLatestVersionAsync();
             if (latest > GetCurrentVersion())
             {
-                _notificationService.ShowNotification("Update available",
-                    "Click to open the releases page.", "https://github.com/felixse/FluentTerminal/releases");
+                _notificationService.ShowNotification("有新版本",
+                    "点击此链接升级", "https://github.com/mahoshojoHCG/FluentTerminal/releases");
             }
             else if (notifyNoUpdate)
             {
-                _notificationService.ShowNotification("No update available", "You're up to date!");
+                _notificationService.ShowNotification("无可用更新", "当前版本为最新！");
             }
         }
 
@@ -40,7 +40,7 @@ namespace FluentTerminal.App.Services.Implementation
         public async Task<Version> GetLatestVersionAsync()
         {
             var restClient = new RestClient(apiEndpoint);
-            var restRequest = new RestRequest("/repos/felixse/fluentterminal/releases", Method.GET);
+            var restRequest = new RestRequest("/repos/mahoshojoHCG/fluentterminal/releases", Method.GET);
 
             var restResponse = await restClient.ExecuteTaskAsync(restRequest);
             if (restResponse.IsSuccessful)

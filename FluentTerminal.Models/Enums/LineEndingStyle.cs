@@ -4,13 +4,13 @@ namespace FluentTerminal.Models.Enums
 {
     public enum LineEndingStyle
     {
-        [Description("Do not modify")]
+        [Description("不改变行尾")]
         DoNotModify,
 
-        [Description("Convert to CRLF")]
+        [Description("改变行尾为CR+LF(Windows)")]
         ToCRLF,
 
-        [Description("Convert to LF")]
+        [Description("改变行尾为LF(Unix)")]
         ToLF
     }
 }

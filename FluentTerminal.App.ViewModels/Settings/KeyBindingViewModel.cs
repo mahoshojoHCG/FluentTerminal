@@ -118,9 +118,9 @@ namespace FluentTerminal.App.ViewModels.Settings
 
         private async Task Delete()
         {
-            var result = await _dialogService.ShowMessageDialogAsnyc("Please confirm", "Are you sure you want to delete this keybinding?", DialogButton.OK, DialogButton.Cancel).ConfigureAwait(true);
+            var result = await _dialogService.ShowMessageDialogAsnyc("提示", "是否删除此快捷键？", DialogButton.确认, DialogButton.取消).ConfigureAwait(true);
 
-            if (result == DialogButton.OK)
+            if (result == DialogButton.确认)
             {
                 Deleted?.Invoke(this, EventArgs.Empty);
             }

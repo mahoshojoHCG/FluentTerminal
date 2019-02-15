@@ -118,7 +118,7 @@ namespace FluentTerminal.App.ViewModels.Settings
 
                 if (parser == null)
                 {
-                    await _dialogService.ShowMessageDialogAsnyc("Import theme failed", "No suitable parser found", DialogButton.OK).ConfigureAwait(false);
+                    await _dialogService.ShowMessageDialogAsnyc("Import theme failed", "No suitable parser found", DialogButton.确认).ConfigureAwait(false);
                     return;
                 }
 
@@ -130,7 +130,7 @@ namespace FluentTerminal.App.ViewModels.Settings
                 }
                 catch (Exception exception)
                 {
-                    await _dialogService.ShowMessageDialogAsnyc("Import theme failed", exception.Message, DialogButton.OK).ConfigureAwait(false);
+                    await _dialogService.ShowMessageDialogAsnyc("Import theme failed", exception.Message, DialogButton.确认).ConfigureAwait(false);
                 }
             }
         }

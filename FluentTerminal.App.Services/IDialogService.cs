@@ -5,8 +5,8 @@ namespace FluentTerminal.App.Services
 {
     public enum DialogButton
     {
-        OK,
-        Cancel
+        确认,
+        取消
     }
 
     public interface IDialogService

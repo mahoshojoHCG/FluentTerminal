@@ -23,7 +23,7 @@
                 VerticalAlignment="Center"
                 FontSize="28"
                 Style="{StaticResource TitleTextBlockStyle}"
-                Text="Mouse" />
+                Text="鼠标" />
             <CommandBar
                 Grid.Column="1"
                 HorizontalAlignment="Right"
@@ -33,41 +33,41 @@
                 <AppBarButton
                     Command="{x:Bind ViewModel.RestoreDefaultsCommand}"
                     Icon="Undo"
-                    Label="Restore Defaults" />
+                    Label="恢复默认设置" />
             </CommandBar>
         </Grid>
         <ScrollViewer Grid.Row="2" Margin="24,0,0,0">
             <StackPanel>
                 <ToggleSwitch
                 Margin="0,0,0,24"
-                Header="Copy on select"
+                Header="复制选中内容"
                 IsOn="{x:Bind ViewModel.CopyOnSelect, Mode=TwoWay}" />
-                <TextBlock Margin="0,0,0,8" Text="Middle button action" />
+                <TextBlock Margin="0,0,0,8" Text="鼠标中键行为" />
                 <RadioButton
-                Content="Nothing"
+                Content="无"
                 GroupName="MiddleButton"
                 IsChecked="{x:Bind ViewModel.MouseMiddleClickNoneIsSelected, Mode=TwoWay}" />
                 <RadioButton
-                Content="Context menu"
+                Content="显示操作目录"
                 GroupName="MiddleButton"
                 IsChecked="{x:Bind ViewModel.MouseMiddleClickContextMenuIsSelected, Mode=TwoWay}" />
                 <RadioButton
                 Margin="0,0,0,24"
-                Content="Paste"
+                Content="粘贴"
                 GroupName="MiddleButton"
                 IsChecked="{x:Bind ViewModel.MouseMiddleClickPasteIsSelected, Mode=TwoWay}" />
-                <TextBlock Margin="0,0,0,8" Text="Right button action" />
+                <TextBlock Margin="0,0,0,8" Text="鼠标右键行为" />
                 <RadioButton
-                Content="Nothing"
+                Content="无"
                 GroupName="RightButton"
                 IsChecked="{x:Bind ViewModel.MouseRightClickNoneIsSelected, Mode=TwoWay}" />
                 <RadioButton
-                Content="Context menu"
+                Content="显示操作目录"
                 GroupName="RightButton"
                 IsChecked="{x:Bind ViewModel.MouseRightClickContextMenuIsSelected, Mode=TwoWay}" />
                 <RadioButton
                 Margin="0,0,0,24"
-                Content="Paste"
+                Content="粘贴"
                 GroupName="RightButton"
                 IsChecked="{x:Bind ViewModel.MouseRightClickPasteIsSelected, Mode=TwoWay}" />
             </StackPanel>

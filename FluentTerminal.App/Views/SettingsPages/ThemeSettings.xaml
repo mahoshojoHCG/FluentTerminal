@@ -41,7 +41,7 @@
                 VerticalAlignment="Center"
                 FontSize="28"
                 Style="{StaticResource TitleTextBlockStyle}"
-                Text="Themes" />
+                Text="主题" />
             <CommandBar
                 Grid.Column="1"
                 HorizontalAlignment="Right"
@@ -54,11 +54,11 @@
                     Command="{x:Bind ViewModel.SelectedTheme.SetActiveCommand, Mode=OneWay}"
                     Icon="Accept"
                     IsEnabled="{Binding ViewModel.SelectedTheme.IsActive, Mode=OneWay, Converter={StaticResource NegateConverter}}"
-                    Label="Set Active" />
+                    Label="应用" />
                 <AppBarButton
                     Name="ExportButton"
                     Command="{x:Bind ViewModel.SelectedTheme.ExportCommand, Mode=OneWay}"
-                    Label="Export">
+                    Label="导出">
                     <AppBarButton.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEE71;" />
                     </AppBarButton.Icon>
@@ -68,17 +68,17 @@
                     Command="{x:Bind ViewModel.CloneCommand, Mode=OneWay}"
                     CommandParameter="{x:Bind ViewModel.SelectedTheme, Mode=OneWay}"
                     Icon="Copy"
-                    Label="Clone" />
+                    Label="复制" />
                 <AppBarButton
                     Name="EditButton"
                     Command="{x:Bind ViewModel.SelectedTheme.EditCommand, Mode=OneWay}"
                     Icon="Edit"
-                    Label="Edit" />
+                    Label="编辑" />
                 <AppBarButton
                     Name="DeleteButton"
                     Command="{x:Bind ViewModel.SelectedTheme.DeleteCommand, Mode=OneWay}"
                     Icon="Delete"
-                    Label="Delete" />
+                    Label="删除" />
             </CommandBar>
             <CommandBar
                 Grid.Column="1"
@@ -91,12 +91,12 @@
                     Name="SaveButton"
                     Command="{x:Bind ViewModel.SelectedTheme.SaveChangesCommand, Mode=OneWay}"
                     Icon="Save"
-                    Label="Save" />
+                    Label="保存" />
                 <AppBarButton
                     Name="CancelButton"
                     Command="{x:Bind ViewModel.SelectedTheme.CancelEditCommand, Mode=OneWay}"
                     Icon="Cancel"
-                    Label="Cancel" />
+                    Label="取消" />
             </CommandBar>
         </Grid>
         <ScrollViewer
@@ -145,7 +145,7 @@
                                 Margin="0,0,6,0">
                                 <SymbolIcon Symbol="Add" />
                             </Viewbox>
-                            <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="Create new" />
+                            <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="新建" />
                         </StackPanel>
                     </Button.Content>
                 </Button>
@@ -165,7 +165,7 @@
                                 Margin="0,0,6,0">
                                 <SymbolIcon Symbol="OpenFile" />
                             </Viewbox>
-                            <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="Import" />
+                            <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="导入" />
                         </StackPanel>
                     </Button.Content>
                 </Button>
@@ -193,12 +193,12 @@
                             </TextBlock>
                             <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="{x:Bind Author, Mode=OneWay}" />
                             <TextBox
-                                Header="Name"
+                                Header="名称"
                                 Text="{x:Bind Name, Mode=TwoWay}"
                                 Visibility="{x:Bind InEditMode, Mode=OneWay, Converter={StaticResource TrueToVisibleConverter}}" />
                             <TextBox
                                 Margin="0,24,0,0"
-                                Header="Author"
+                                Header="作者"
                                 Text="{x:Bind Author, Mode=TwoWay}"
                                 Visibility="{x:Bind InEditMode, Mode=OneWay, Converter={StaticResource TrueToVisibleConverter}}" />
                             <Grid Margin="0,48,0,0">
@@ -309,7 +309,7 @@
                                 <TextBlock
                                     Grid.Row="3"
                                     Margin="0,6,0,0"
-                                    Text="Click on a color to edit"
+                                    Text="点击一个颜色以编辑"
                                     Visibility="{x:Bind InEditMode, Mode=OneWay, Converter={StaticResource TrueToVisibleConverter}}" />
                             </Grid>
                         </StackPanel>

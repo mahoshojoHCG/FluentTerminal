@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10" IgnorableNamespaces="uap mp desktop rescap">
-  <Identity Name="53621FSApps.FluentTerminal" Publisher="CN=BDC72197-B634-438A-B863-16DCB7D90C85" Version="0.3.1.0" />
+  <Identity Name="mahoshojoHCG.FluentTerminalCN" Publisher="CN=BDC72197-B634-438A-B863-16DCB7D90C85" Version="0.3.11.0" />
   <mp:PhoneIdentity PhoneProductId="f7225014-f405-4342-ad2e-ebf6ac60ea2c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Fluent Terminal</DisplayName>
-    <PublisherDisplayName>FS Apps</PublisherDisplayName>
+    <DisplayName>流畅终端</DisplayName>
+    <PublisherDisplayName>HCG Studio</PublisherDisplayName>
     <Logo>Assets\AppIcons\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="FluentTerminal.App.App">
-      <uap:VisualElements DisplayName="Fluent Terminal" Square150x150Logo="Assets\AppIcons\Square150x150Logo.png" Square44x44Logo="Assets\AppIcons\Square44x44Logo.png" Description="Fluent Terminal" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="流畅终端" Square150x150Logo="Assets\AppIcons\Square150x150Logo.png" Square44x44Logo="Assets\AppIcons\Square44x44Logo.png" Description="流畅终端中文版" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\AppIcons\Wide310x150Logo.png" ShortName="Fluent Terminal" Square310x310Logo="Assets\AppIcons\LargeTile.png" Square71x71Logo="Assets\AppIcons\SmallTile.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
