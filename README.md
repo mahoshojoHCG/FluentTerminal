@@ -1,8 +1,9 @@
-# Fluent Terminal
+# 流畅终端中文版
 
-[![Build status](https://fs-apps.visualstudio.com/FluentTerminal/_apis/build/status/FluentTerminal-Universal%20Windows%20Platform-CI)](https://fs-apps.visualstudio.com/FluentTerminal/_build/latest?definitionId=3)
-[![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=FluentTerminal&metric=alert_status)](https://sonarcloud.io/dashboard?id=FluentTerminal)
-[![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/FluentTerminal)
+目前仅汉化UI，说明正在撰写，以下为原版说明：
+
+
+# Fluent Terminal
 
 A Terminal Emulator based on UWP and web technologies.
 
