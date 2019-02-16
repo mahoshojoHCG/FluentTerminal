@@ -1,63 +1,58 @@
 # 流畅终端中文版
 
-目前仅汉化UI，说明正在撰写，以下为原版说明：
+流畅终端是一个基于UMP和web技术的终端模拟器。
 
+## 特性
 
-# Fluent Terminal
+- 可以使用CMD、PowerShell、WSL或自定义终端程序
+- 支持标签页及多窗口
+- 支持自定义主题与外观
+- 导入或导出主题
+- 导入iTerm主题
+- 支持全屏
+- 可自定义快捷键
+- 支持搜索
+- 通过编辑配置在不同shell间快速切换
+- 资源管理器右键目录 ([点此链接下载安装脚本](https://github.com/mahoshojoHCG/FluentTerminal/tree/master/Explorer%20Context%20Menu%20Integration))
+- 我能看到的地方都汉化了（中文版新增）
 
-A Terminal Emulator based on UWP and web technologies.
+## 截图（原版截图）
 
-## Features
+![终端窗口](Screenshots/terminal.jpg)
+![设置窗口](Screenshots/settings.jpg)
 
-- Terminal for PowerShell, CMD, WSL or custom shells
-- Supports tabs and multiple windows
-- Theming and appearance configuration
-- Import/Export themes
-- Import iTerm themes
-- Fullscreen mode
-- Editable keybindings
-- Search function
-- Configure shell profiles to quickly switch between different shells
-- Explorer context menu integration (Installation script can be found [here](https://github.com/felixse/FluentTerminal/tree/master/Explorer%20Context%20Menu%20Integration))
+## 以后新增的功能
 
-## Screenshots
+- 使用特定的快捷键启动新的终端配置
+- 复制和粘贴选项
+- 改进标签页
+- 多屏幕支持
 
-![Terminal window](Screenshots/terminal.jpg)
-![Settings window](Screenshots/settings.jpg)
+## 作为用户，该如何安装
 
-## Up Next
+### 系统需求
+- Windows 10创造者更新（16299）或更新的系统。
 
-- Launch shell profile with a custom defined keybinding
-- Copy&Paste options
-- Improved tabs
-- Split screen support
+### 自动安装
 
-## How to install (as an end-user)
+- 下载最新的安装文件 [下载](https://github.com/mahoshojoHCG/FluentTerminal/releases)。
+- 右键 `Install.ps1`，选择"使用PowerShell运行"。
+- 安装脚本会知道你完成安装。
 
-### Prerequisite
-- You need to update to Fall Creators Update or later.
+### 手动安装
 
-### Automatic install
+- 下载最新的安装文件 [下载](https://github.com/mahoshojoHCG/FluentTerminal/releases)。
+- [启用旁加载模式](https://www.windowscentral.com/how-enable-windows-10-sideload-apps-outside-store)
+  - 额外地，如果你想进行UMP应用开发，[启用开发者模式](https://docs.microsoft.com/zh-CN/windows/uwp/get-started/enable-your-device-for-development) **对于绝大多数用户来书，这是没必要的。**
+- 将所有的*.cer证书文件安装到`本地计算机` -> `受信任的根证书颁发机构`
+  - 这需要管理员权限。如果没有要求管理员权限，你很可能选错了安装位置。
 
-- Download and extract the latest [release](https://github.com/felixse/FluentTerminal/releases).
-- If not already present, download [`Install.ps1`](Install.ps1) to the extracted directory.
-- Right-click on `Install.ps1`, and choose "Run with Powershell".
-- The installer script will walk you through the rest of the process.
+![右键然后选择安装证书](Screenshots/right-click_install-certificate.png)
 
-### Manual install
+![将证书安装到本地计算机](Screenshots/install-certificate_local-machine.png)
 
-- Download the latest [release](https://github.com/felixse/FluentTerminal/releases)
-- [Enable sideloading apps](https://www.windowscentral.com/how-enable-windows-10-sideload-apps-outside-store)
-  - Alternatively, [enable developer mode](https://docs.microsoft.com/en-US/windows/uwp/get-started/enable-your-device-for-development) if you plan to do UWP app development. **For most users that do not intend to do UWP app development, developer mode will not be necessary.**
-- Install the *.cer file into `Local Machine` -> `Trusted Root Certification Authorities`
-  - This will require administrator elevation. If you installed the certificate and did not have to elevate, you likely installed it into an incorrect certificate store.
+- 双击*.appxbundle文件
+- **可选** 添加到到资源管理器的右键菜单([点此链接下载安装脚本](https://github.com/mahoshojoHCG/FluentTerminal/tree/master/Explorer%20Context%20Menu%20Integration)
 
-![Right-Click then choose Install Certificate](Screenshots/right-click_install-certificate.png)
-
-![Install Certificate into Local Machine](Screenshots/install-certificate_local-machine.png)
-
-- double click the *.appxbundle
-- **Optional:** Install Context menu integration from [here](https://github.com/felixse/FluentTerminal/tree/master/Explorer%20Context%20Menu%20Integration)
-
-## How to set up a development environment
-Please refer to [this Wiki page](https://github.com/felixse/FluentTerminal/wiki/How-to-set-up-a-development-environment)
+## 如何搭建开发环境
+[点此查看](https://github.com/mahoshojoHCG/FluentTerminal/wiki/How-to-set-up-a-development-environment)
